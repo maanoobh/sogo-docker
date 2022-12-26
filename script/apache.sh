@@ -12,6 +12,7 @@ configure_apache() {
    echo "ServerName ${SERVER_NAME}" > /etc/apache2/conf-available/servername.conf
    a2enmod proxy_http
    a2enconf servername
+   a2enconf SOGo
    service apache2 restart
 
    log_info "... done"
