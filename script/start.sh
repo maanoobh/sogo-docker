@@ -27,5 +27,5 @@ if [[ ${MEMCACHED_ENABLED,,} = true ]]; then
 fi
 
 log_info "Launching SOGo"
-su -l sogo -s /bin/bash -c "/usr/sbin/sogod -WOWorkersCount ${WORKERS_COUNT} -WONoDetach YES -WOLogFile - -WOPidFile /tmp/sogo.pid"
+su -l sogo -s /bin/bash -c "/usr/sbin/sogod -WOWorkersCount ${WORKERS_COUNT} -WONoDetach YES -WOPort 20000 -WOLogFile - -WOPidFile /tmp/sogo.pid"
 
