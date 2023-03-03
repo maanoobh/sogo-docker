@@ -24,7 +24,7 @@ RUN mkdir /usr/share/doc/sogo \
         && echo "deb http://packages.sogo.nu/nightly/5/debian/ bullseye bullseye" > /etc/apt/sources.list.d/sogo.list \
         && apt-get update && apt-get install -y  \
 		sogo \
-		sogo-activesync \
+#		sogo-activesync \
     && apt-get autoremove --purge \
     && wget -qO- $(wget -nv -qO- https://api.github.com/repos/jwilder/dockerize/releases/latest \
                 | grep -E 'browser_.*dockerize-linux-amd64' | cut -d\" -f4) | tar xzv -C /usr/local/bin/ \
