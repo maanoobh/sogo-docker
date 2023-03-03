@@ -5,7 +5,7 @@ ENV \
     LANG=C \
     DEBIAN_FRONTEND=noninteractive
 
-EXPOSE 80 
+EXPOSE 80 20000
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
